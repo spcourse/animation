@@ -4,14 +4,22 @@ Although a graph is a very useful tool to visualize a simulation, sometimes it's
 
 ## A moving dot
 
-When you draw a point (one $$x$$-value and one $$y$$-value) of which the $$x$$ and $$y$$ change over time, then the point appears to move over the screen. In the code below we let $$x$$ increment, calculate $$y$$ and draw the point on the screen. We also use commands `xlim` and `ylim` to specify in the plot what $$x$$-values and $$y$$-values we want to display. 
+When you draw a point (one $$x$$-value and one $$y$$-value) of which the $$x$$ and $$y$$ change over time, then the point appears to move over the screen. In the code below we let $$x$$ increment, calculate $$y$$ and draw the point on the screen. We also use commands `xlim` and `ylim` to specify in the plot what $$x$$-values and $$y$$-values we want to display.
 
     import math
-    import numpy as np
     import matplotlib.pyplot as plt
-    
+
+    def arange(start, stop, step):
+        my_list = []
+
+        while start < stop:
+            my_list.append(start)
+            start += step
+
+        return my_list
+
     # take small steps in x between 0 and 2pi
-    for x in np.arange(0, 2 * math.pi, 0.05):
+    for x in arange(0, 2 * math.pi, 0.05):
 
         y = math.sin(x)
 
@@ -37,14 +45,22 @@ When you draw a point (one $$x$$-value and one $$y$$-value) of which the $$x$$ a
 Creating a graph by using lists: a list of $$x$$-values and a list of $$y$$-values. If you repeatedly expand those lists you get the following effect: the function $$f(x) = sin(x)$$ represented by a red line:
 
     import math
-    import numpy as np
     import matplotlib.pyplot as plt
-    
+
+    def arange(start, stop, step):
+        my_list = []
+
+        while start < stop:
+            my_list.append(start)
+            start += step
+
+        return my_list
+
     x_coords = []
     y_coords = []
 
     # take small steps in x
-    for x in np.arange(0, 2 * math.pi, 0.05):
+    for x in arange(0, 2 * math.pi, 0.05):
 
         y = math.sin(x)
 
@@ -72,14 +88,22 @@ As you can see, the code only changed by three lines as opposed to example 1. Th
 You can also draw the dot and the line at the same time as well as display information to the screen about the $$(x,y)$$ position of the dot on the screen.
 
     import math
-    import numpy as np
     import matplotlib.pyplot as plt
-    
+
+    def arange(start, stop, step):
+        my_list = []
+
+        while start < stop:
+            my_list.append(start)
+            start += step
+
+        return my_list
+
     x_coords = []
     y_coords = []
 
     # take small steps in x
-    for x in np.arange(0, 2 * math.pi, 0.05):
+    for x in arange(0, 2 * math.pi, 0.05):
 
         y = math.sin(x)
 
