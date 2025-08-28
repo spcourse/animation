@@ -44,7 +44,7 @@ When you draw a point (one $$x$$-value and one $$y$$-value) of which the $$x$$ a
     print("animate...")
     ani = FuncAnimation(fig, update, frames=130, blit=False)
 
-    # Save animation as .gif
+    # Save animation as .gif (this might take a good minute)
     print("save gif...")
     ani.save("sine.gif", writer=PillowWriter(fps=20))
     print("done!")
