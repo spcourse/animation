@@ -6,9 +6,9 @@ Although a graph is a very useful tool to visualize a simulation, sometimes it's
 
 When you draw a point (one $$x$$-value and one $$y$$-value) of which the $$x$$ and $$y$$ change over time, then the point appears to move over the screen. In the code below we let $$x$$ increment, calculate $$y$$ and draw the point on the screen. We also use commands `xlim` and `ylim` to specify in the plot what $$x$$-values and $$y$$-values we want to display.
 
-    import math
-    import matplotlib.pyplot as plt
-    from matplotlib.animation import FuncAnimation, PillowWriter
+import math
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation, PillowWriter
 
     def update(frame):
         """This update function will be automatically called by FuncAnimation() below
@@ -30,10 +30,6 @@ When you draw a point (one $$x$$-value and one $$y$$-value) of which the $$x$$ a
         ax.plot(x, y, 'bo', markersize = 10)
         plt.xlim(0, 2 * math.pi)
         plt.ylim(-1, 1)
-
-        # update graph
-        plt.draw()
-        plt.pause(0.001)
 
         return ax
 
